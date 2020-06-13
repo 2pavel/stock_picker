@@ -7,14 +7,11 @@ def stock_picker(prices_array)
     for i in 0...prices_array.length
       trade = prices_array[i + day] - price if prices_array[i + day] != nil
 
-      #binding.pry
       if trade > current_best
         current_best = trade
         best_trade = [day, i]
-
-      #binding.pry
-      
       end
+      
     end
   end
   p current_best
